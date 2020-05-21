@@ -87,7 +87,7 @@ body {
   font-family: var(--main-font);
   font-weight: 300;
   overflow-x: hidden;
-  background-color: var(--main-color);
+  background-color: #fff;
 }
 
 a,
