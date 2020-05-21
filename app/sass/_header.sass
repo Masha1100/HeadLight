@@ -2,13 +2,13 @@
 						HEADER START
 /*============================================================= */
 .header
-	height: 65px
+	display: block
 	width: 100%
-	padding: 12.5px 0
 	background-color: #fff
 	&__inner
 		display: flex
 		justify-content: space-between
+		padding: 12.5px 0
 	&__logo
 		width: 240px
 	&__left
@@ -48,39 +48,107 @@
 		display: flex
 		align-items: center
 	&__schedule
-		cursor: pointer
-		display: flex
-		align-items: center
-		margin-right: 20px
-		font-family: Geometria
-		font-style: normal
-		font-weight: normal
-		font-size: 14px
-		line-height: 18px
-		color: var(--menu-font-color)
-		img
-			padding: 0 5px
-			height: 13px
+		a
+			text-decoration: none
+			display: flex
+			align-items: center
+			margin-right: 20px
+			font-family: Geometria
+			font-style: normal
+			font-weight: normal
+			font-size: 14px
+			line-height: 18px
+			color: var(--menu-font-color)
+			img
+				padding: 0 5px
+				height: 13px
 	&__phone
+		a
+			text-decoration: none
+			position: relative
+			display: flex
+			align-items: center
+			font-family: Geometria
+			font-style: normal
+			font-weight: 500
+			font-size: 20px
+			line-height: 25px
+			color: var(--font-color)
+			&::after
+				content: ''
+				position: absolute
+				top: 60%
+				right: -17.5px
+				display: block
+				border: 6px solid transparent
+				border-top: 6px solid var(--font-color)
+				transform: translateY(-60%)
+			img
+				padding: 0 5px
+				height: 16px
+	&__sub-menu
+		height: 55px
+		width: 100%
+		background-color: var(--main-color)
+		& .container
+			height: 100%
+			display: flex
+			justify-content: space-between
+			align-items: center
+	&__catalog
 		cursor: pointer
-		position: relative
 		display: flex
 		align-items: center
-		font-family: Geometria
-		font-style: normal
-		font-weight: 500
-		font-size: 20px
-		line-height: 25px
-		color: var(--font-color)
-		&::after
-			content: ''
-			position: absolute
-			top: 60%
-			right: -17.5px
-			display: block
-			border: 6px solid transparent
-			border-top: 6px solid var(--font-color)
-			transform: translateY(-60%)
-		img
-			padding: 0 5px
-			height: 16px
+		justify-content: center
+		height: 100%
+		width: 235px
+		background-color: var(--second-color)
+		&__title
+			a
+				text-decoration: none
+				font-family: Geometria
+				font-style: normal
+				font-weight: 500
+				font-size: 20px
+				line-height: 25px
+				color: #fff
+	&__search
+		width: 480px
+		height: 30px
+		border-radius: 4px
+		background-color: #fff
+		.search-field
+			position: relative
+			input
+				padding: 5px 30px 5px 10px
+				input:placeholder
+					font-family: Geometria
+					font-style: normal
+					font-weight: normal
+					font-size: 16px
+					line-height: 20px
+					color: var(--menu-font-color)
+			label
+				img
+					cursor: pointer
+					position: absolute
+					top: 50%
+					right: 10px
+					transform: translateY(-50%)
+	&__personal
+		display: flex
+		align-items: center
+	&__shopping
+		padding-right: 25px
+	&__auth
+		a
+			display: flex
+			align-items: center
+			span
+				padding: 0 8px
+				font-family: Geometria
+				font-style: normal
+				font-weight: normal
+				font-size: 14px
+				line-height: 18px
+				color: #fff

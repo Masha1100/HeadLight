@@ -50,21 +50,50 @@
 		</div>
 		<div class="header__right">
 			<h3 class="header__schedule">
-				<img src="/img/icons/clock.svg" alt="">
-				График работы
+				<a href="#">
+					<img src="/img/icons/clock.svg" alt="">
+					<span>График работы</span>
+				</a>
 			</h3>
 			<h3 class="header__phone">
-				<img src="/img/icons/phone.svg" alt="">
-				+0982423423
+				<a href="#">
+					<img src="/img/icons/phone.svg" alt="">
+					<span>+0982423423</span>
+				</a>
 			</h3>
 		</div>
-		<!-- <div class="header__mob-search container">
-			<form action="/search" method="get" id="mob-search">
-				<div class="mob-search-field">
-					<input name="search" id="search-inp" value="">
+	</div>
+	<div class="header__sub-menu">
+		<div class="container">
+			<div class="header__catalog">
+				<div class="header__catalog__title title">
+					<a href="#">КАТАЛОГ</a>
 				</div>
-			</form>
-		</div> -->
+			</div>
+			<div class="header__search">
+				<form action="/search" method="get" id="search">
+					<div class="search-field">
+						<label for="search-inp">
+							<img src="/img/icons/ico-search.svg" alt="search">
+						</label>
+						<input name="search" id="search-inp" placeholder="Поиск" value="">
+					</div>
+				</form>
+			</div>
+			<div class="header__personal">
+				<div class="header__shopping">
+					<a href="#">
+						<img src="/img/icons/cart.svg" alt="">
+					</a>
+				</div>
+				<div class="header__auth">
+					<a href="#">
+						<img src="/img/icons/user.svg" alt="">
+						<span>Вход в кабинет</span>
+					</a>
+				</div>
+			</div>
+		</div>
 	</div>
 </header>
 		<main class="main">
