@@ -270,7 +270,8 @@ input[type='radio']:checked::before {
 .header__inner {
   display: flex;
   justify-content: space-between;
-  padding: 12.5px 0;
+  padding-top: 12.5px;
+  padding-bottom: 12.5px;
 }
 
 .header__logo {
@@ -355,13 +356,14 @@ input[type='radio']:checked::before {
   font-size: 20px;
   line-height: 25px;
   color: var(--font-color);
+  padding-right: 17.5px;
 }
 
 .header__phone a::after {
   content: '';
   position: absolute;
   top: 60%;
-  right: -17.5px;
+  right: 0;
   display: block;
   border: 6px solid transparent;
   border-top: 6px solid var(--font-color);
@@ -453,7 +455,7 @@ input[type='radio']:checked::before {
 }
 
 .header__auth a span {
-  padding: 0 8px;
+  padding-left: 8px;
   font-family: Geometria;
   font-style: normal;
   font-weight: normal;
