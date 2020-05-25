@@ -12,13 +12,34 @@
 	font-family: var(--main-font), sans-serif
 	font-size: 14px
 	transition: 0.5s
+/*============= TITLE SECTION STYLE ============= */
+.title-section
+	position: relative
+	text-align: center
+	text-transform: uppercase
+	color: #000
+	font-family: Geometria
+	font-style: normal
+	font-weight: 500
+	font-size: 24px
+	line-height: 30px
+	margin-bottom: 12px
+	&::after
+		position: absolute
+		bottom: -12px
+		left: 50%
+		content: ''
+		display: block
+		width: 224px
+		border: 2px solid var(--third-color)
+		transform: translateX(-50%)
 /*============= INDEX PAGE ============= */
 .nav
 	&__inner
 		display: flex
 .directory
 	width: 235px
-	border: 1px solid #F0F0F0
+	border: 1px solid var(--border-color)
 	box-sizing: border-box
 	padding: 5px 15px 15px 15px
 	li
@@ -102,11 +123,30 @@
 			height: 2px
 			width: 50px
 			margin: 0 10px
-			background-color: #c4c4c4
+			background-color: var(--slick-dots)
 			&::before
 				content: ""
 		li button:before
 			content: ""
 
 .brands
+	padding: 50px 0
 	background-color: var(--bg-color)
+	&__inner
+		display: flex
+		justify-content: center
+		margin-top: 45px
+	&__items
+		display: flex
+		flex-direction: column
+		padding: 0 20px
+	&__item
+		display: flex
+		position: relative
+		margin-left: 70px
+	&__img
+		max-width: 60px
+		position: absolute
+		top: 50%
+		left: -35px
+		transform: translate(-50%, -50%)
