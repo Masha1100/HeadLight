@@ -13,9 +13,11 @@
 	font-size: 14px
 	transition: 0.5s
 /*============= INDEX PAGE ============= */
+.nav
+	&__inner
+		display: flex
 .directory
 	width: 235px
-	float: left
 	border: 1px solid #F0F0F0
 	box-sizing: border-box
 	padding: 5px 15px 15px 15px
@@ -30,7 +32,6 @@
 			line-height: 18px
 			color: var(--menu-font-color)
 .mn-slider
-	float: right
 	width: calc(100% - 235px)
 	&__item
 		position: relative
@@ -39,7 +40,7 @@
 		left: 15%
 		top: 50%
 		transform: translate(-15%, -50%)
-		h1
+		h2
 			color: #FFFFFF
 			font-family: Geometria
 			font-style: normal
@@ -106,3 +107,6 @@
 				content: ""
 		li button:before
 			content: ""
+
+.brands
+	background-color: var(--bg-color)
