@@ -870,6 +870,10 @@ input[type='radio']:checked::before {
   margin-bottom: 30px;
 }
 
+.about__launch {
+  padding: 0 30px;
+}
+
 .about__inner {
   position: relative;
   display: grid;
@@ -909,7 +913,14 @@ input[type='radio']:checked::before {
   transform: translateY(-50%);
 }
 
+@media screen and (max-width: 1200px) {
+  .about__launch-bc .figure-bc {
+    max-width: 800px;
+  }
+}
+
 .about__points {
+  padding: 0 30px;
   position: relative;
 }
 
@@ -2724,6 +2735,10 @@ input[type='radio']:checked::before {
 .footer__nav {
   display: flex;
   justify-content: space-between;
+}
+
+.footer__nav .nav {
+  padding: 0 20px;
 }
 
 .footer__nav .nav__title {

@@ -300,6 +300,8 @@
 		display: flex
 		justify-content: center
 		margin-bottom: 30px
+	&__launch
+		padding: 0 30px
 	&__inner
 		position: relative
 		display: grid
@@ -329,7 +331,9 @@
 			left: -320px
 			top: 50%
 			transform: translateY(-50%)
+			+lg(max-width, 800px)
 	&__points
+		padding: 0 30px
 		position: relative
 		.circle-bc
 			top: -80px
