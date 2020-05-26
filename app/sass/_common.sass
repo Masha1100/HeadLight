@@ -15,6 +15,11 @@
 	color: var(--main-color)
 	border: 1px solid var(--main-color)
 	background-color: #fff
+.button-section
+	margin: 0 auto
+	display: block
+	padding: 15px 60px
+	border-radius: 5px
 /*============= TITLE SECTION STYLE ============= */
 .title-section
 	position: relative
@@ -26,20 +31,16 @@
 	font-weight: 500
 	font-size: 24px
 	line-height: 50px
+	display: inline-block
 	&::after
 		position: absolute
 		bottom: 0px
 		left: 50%
 		content: ''
 		display: block
-		width: 224px
+		width: 60%
 		border: 2px solid var(--third-color)
 		transform: translateX(-50%)
-.button-section
-	margin: 0 auto
-	display: block
-	padding: 15px 60px
-	border-radius: 5px
 /*============= INDEX PAGE ============= */
 .nav
 	&__inner
@@ -143,6 +144,9 @@
 	margin: 60px 0
 	padding: 50px 100px
 	background-color: var(--bg-color)
+	.title-alignCenter
+		display: flex
+		justify-content: center
 	&__inner
 		display: flex
 		justify-content: space-between
@@ -187,16 +191,20 @@
 			transition: opacity .2s ease-in-out
 /*============= MARKET LEADERS SLIDER ============= */
 .ml-slider
+	.title-alignCenter
+		display: flex
+		justify-content: center
 	.slick-slide
 		padding: 0 25px
 	.slick-dotted.slick-slider
+		margin-top: 35px
 		margin-bottom: 45px
-	&__items
-		margin: 35px 0
 	&__item
-		position: relative
 		padding: 15px 20px
 		border: 1px solid var(--border-color)
+		margin-bottom: 5px
+		&:hover
+			box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5)
 		.bridge
 			margin: 20px 0 25px 0
 			border: 1px solid var(--border-color)
@@ -257,21 +265,18 @@
 			.ml-slider__button-hidden
 				width: 100%
 				position: static
-				opacity: 1
 				transform: translateX(0)
 	&__button
 		width: 100%
 		margin: 7.5px 0
 		padding: 15px 0
+		position: relative
 	&__button-hidden
 		position: absolute
-		left: 50%
+		top: -100%
 		width: calc(100% - 40px)
 		margin: 7.5px 0
 		padding: 15px 0
-		opacity: 0
-		transition: opacity .5s ease-in-out
-		transform: translateX(-50%)
 	.slick-dots
 		bottom: -35px
 		.slick-active
@@ -285,3 +290,126 @@
 				content: ""
 		li button:before
 			content: ""
+/*============= ABOUT ============= */
+.about
+	padding: 70px 0
+	.title-alignCenter
+		display: flex
+		justify-content: center
+		margin-bottom: 30px
+	&__inner
+		position: relative
+		display: grid
+		grid-template-columns: 1fr 1fr
+	&__title
+		font-family: Geometria
+		font-style: normal
+		font-weight: bold
+		font-size: 30px
+		line-height: 38px
+		color: var(--font-color)
+		margin-bottom: 30px
+	&__suptitle
+		font-family: Geometria
+		font-style: normal
+		font-weight: normal
+		font-size: 20px
+		line-height: 157.2%
+		color: var(--menu-font-color)
+		margin-bottom: 90px
+	&__launch-bc
+		position: relative
+		img
+			position: absolute
+			z-index: 900
+		&__rectangle
+			width: 355px
+			height: 355px
+			position: absolute
+			background-color: rgba(103, 148, 215, 0.07)
+			border: 1px solid rgba(93, 138, 204, 0.06)
+			box-sizing: border-box
+			border-radius: 43px
+			transform: rotate(-45deg)
+		&__line
+			position: absolute
+			border: 1px solid #1B82E4
+		&__line-1
+			@extend .about__launch-bc__line
+			width: 568px
+			left: -140px
+			top: 180px
+			transform: rotate(-135deg)
+		&__line-2
+			@extend .about__launch-bc__line
+			width: 385px
+			left: 360px
+			top: 250px
+			transform: rotate(135deg)
+		&__line-3
+			@extend .about__launch-bc__line
+			width: 356px
+			left: 360px
+			top: 80px
+			transform: rotate(45deg)
+		&__rectangle-1
+			@extend .about__launch-bc__rectangle
+			bottom: -350px
+			left: -255px
+		&__rectangle-2
+			@extend .about__launch-bc__rectangle
+			bottom: -350px
+			left: -25px
+		&__rectangle-3
+			@extend .about__launch-bc__rectangle
+			bottom: -350px
+			left: 205px
+	&__points
+		&-bc
+			position: absolute
+			z-index: -1
+			top: -65px
+			right: 0
+			display: grid
+			grid-template-columns: repeat(11, 1fr)
+			&-circle
+				width: 14px
+				height: 14px
+				margin: 15px
+				border-radius: 100%
+				background: linear-gradient(180deg, rgba(76, 121, 187, 0.26) 0%, rgba(116, 161, 228, 0.26) 100%)
+		&__item
+			position: relative
+			padding: 25px 35px
+			margin-bottom: 40px
+			max-width: 600px
+			background-color: #fff
+			box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5)
+		&__index
+			display: flex
+			align-items: center
+			justify-content: center
+			position: absolute
+			top: 50%
+			left: -20px
+			width: 40px
+			height: 40px
+			border-radius: 100%
+			transform: translateY(-50%)
+			background: linear-gradient(180deg, #4A77B9 0%, #77A4E7 100%)
+			box-shadow: 0px 0px 35px rgba(112, 157, 223, 0.98)
+			.text
+				font-family: Roboto
+				font-style: normal
+				font-weight: 500
+				font-size: 20px
+				line-height: 23px
+				text-align: center
+				color: #FFFFFF
+		&__text
+			font-family: Geometria
+			font-style: normal
+			font-weight: 300
+			font-size: 20px
+			line-height: 137.2%
+			color: var(--font-color)

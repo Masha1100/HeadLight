@@ -11,7 +11,8 @@ function initJs() {
 
 	if (ml_slider) {
 		$(ml_slider).slick({
-			infinite: true,
+			arrows: false,
+			infinite: false,
 			slidesToShow: 4,
 			slidesToScroll: 4,
 			dots: true
