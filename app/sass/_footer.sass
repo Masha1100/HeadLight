@@ -1,32 +1,36 @@
 /*==============================================================
 						FOOTER STYLE START
 /*============================================================= */
+%footer__social
+	padding: 0 10px
+	font-family: Geometria
+	font-style: normal
+	font-weight: 500
+	font-size: 20px
+	line-height: 25px
+	color: #FFFFFF
+	img
+		height: 18px
 .footer
-	padding: 25px
 	background-color: var(--footer-bg-color)
 	&__inner
+		padding: 25px
 		display: grid
 		grid-template-columns: repeat(3, 1fr)
+		+md(display, none)
 	&__social
 		margin: 25px 0
 		display: flex
 		align-items: center
 		&__item
-			padding: 0 10px
-			font-family: Geometria
-			font-style: normal
-			font-weight: 500
-			font-size: 20px
-			line-height: 25px
-			color: #FFFFFF
-			img
-				height: 18px
+			@extend %footer__social
 	&__nav
 		display: flex
 		justify-content: space-between
 		.nav
 			padding: 0 20px
 			&__title
+				text-transform: uppercase
 				font-family: Geometria
 				font-style: normal
 				font-weight: 500
@@ -63,7 +67,9 @@
 	hr
 		margin: 30px 0px 15px 0px
 		border: 1px solid #D5D5D5
+		+sm(margin, 0)
 	&__copyright
+		padding: 7px 0
 		text-align: center
 		font-family: Roboto
 		font-style: normal
@@ -71,3 +77,57 @@
 		font-size: 14px
 		line-height: 16px
 		color: #E0E0E0
+	&-mob
+		display: flex
+		flex-direction: column
+		align-items: center
+		+lg-m(display, none)
+		&__logo
+			margin: 20px 0
+		&__nav
+			width: 100%
+		&__items
+			cursor: pointer
+			position: relative
+			width: 100%
+			padding: 12px
+			border-bottom: 1px solid #fff
+			text-transform: uppercase
+			font-family: Geometria
+			font-style: normal
+			font-weight: 500
+			font-size: 16px
+			line-height: 20px
+			color: #FFFFFF
+			&::after
+				content: ''
+				right: 15px
+				top: 50%
+				position: absolute
+				display: block
+				width: 12px
+				height: 12px
+				border-bottom: 2px solid #fff
+				border-right: 2px solid #fff
+				transform: translateY(-50%) rotate(-45deg)
+			&:first-child
+				border-top: 1px solid #fff
+			ul
+				display: none
+		.footer__schedule
+			margin: 25px 0 30px 0
+			.info__title
+				text-align: center
+			.info__text
+				text-align: center
+		.footer-mob__social
+			margin: 20px 0
+			&__items
+				display: flex
+				align-items: center
+				justify-content: center
+			&__title
+				margin-bottom: 20px
+				@extend %footer__social
+			&__item
+				@extend %footer__social

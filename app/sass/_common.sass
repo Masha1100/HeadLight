@@ -46,26 +46,34 @@
 	&__inner
 		display: flex
 		flex-wrap: wrap
-.directory
-	height: 100%
-	width: 235px
-	border: 1px solid var(--border-color)
-	box-sizing: border-box
-	padding: 5px 15px 15px 15px
-	li
-		padding-bottom: 3px
-		a
-			text-decoration: none
-			font-family: Geometria
-			font-style: normal
-			font-weight: 500
-			font-size: 14px
-			line-height: 18px
-			color: var(--menu-font-color)
+	.container
+		+lg(padding, 0)
+.main
+	.directory
+		height: 100%
+		width: 235px
+		border: 1px solid var(--border-color)
+		box-sizing: border-box
+		padding: 5px 15px 15px 15px
+		+lg(display, none)
+		li
+			margin-bottom: 5px
+			a
+				text-decoration: none
+				font-family: Geometria
+				font-style: normal
+				font-weight: 500
+				font-size: 14px
+				line-height: 18px
+				color: var(--menu-font-color)
 /*============= MAIN SLIDER ============= */
 .mn-slider
 	margin-bottom: 50px
 	width: calc(100% - 235px)
+	+lg(margin-bottom, 20px)
+	+lg(width, 100%)
+	.slick-list.draggable
+		+lg(margin, 0)
 	&__item
 		position: relative
 	&__info
@@ -73,6 +81,7 @@
 		left: 15%
 		top: 50%
 		transform: translate(-15%, -50%)
+		+md(display, none)
 		h2
 			color: #FFFFFF
 			font-family: Geometria
@@ -143,31 +152,42 @@
 /*============= SECTION BRANDS ============= */
 .brands
 	margin-bottom: 50px
-	padding: 50px 100px
+	padding: 50px 0
 	background-color: var(--bg-color)
+	+sm(margin-bottom, 30px)
 	.title-alignCenter
 		display: flex
 		justify-content: center
 	&__inner
-		display: flex
-		justify-content: space-between
 		margin-top: 45px
-		overflow: hidden
+		display: grid
+		grid-template-columns: repeat(5, 1fr)
+		+lg(grid-template-columns, repeat(4, 1fr))
+		+md(grid-template-columns, repeat(2, 1fr))
+		+xs(grid-template-columns, repeat(1, 1fr))
 	&__items
 		display: flex
 		flex-direction: column
-		padding: 0 20px
 	&__item
-		display: flex
-		position: relative
-		margin-left: 70px
-		padding: 10px 0
+		margin: 0
+		display: grid
+		align-items: center
+		grid-template-columns: 1fr 1fr
+		grid-gap: 15px
+		padding: 7.5px 0px
 	&__img
-		max-width: 60px
-		position: absolute
-		top: 50%
-		left: -35px
-		transform: translate(-50%, -50%)
+		display: flex
+		justify-content: flex-end
+		max-width: 100%
+		position: static
+		top: 0
+		left: 0
+		transform: translate(0, 0)
+		div
+			width: 60px
+			img
+				margin: 0 auto
+				max-width: 60px
 	&__title
 		position: relative
 		text-decoration: none
@@ -191,6 +211,31 @@
 			height: 2px
 			background-color: var(--third-color)
 			transition: opacity .2s ease-in-out
+	.deploy
+		position: relative
+		display: block
+		margin: 30px auto 25px
+		font-family: Roboto
+		font-style: normal
+		font-weight: 500
+		font-size: 20px
+		line-height: 23px
+		color: var(--main-color)
+		+lg-m(display, none)
+		&::after
+			content: ''
+			position: absolute
+			top: calc(50% - 4.5px)
+			right: -14.5px
+			display: block
+			width: 7.5px
+			height: 7.5px
+			border-left: 2px solid var(--main-color)
+			border-bottom: 2px solid var(--main-color)
+			transform: translateY(calc(50% - 4.5px)) rotate(-45deg)
+	.active
+		&::after
+			transform: translateY(calc(50% - 4.5px)) rotate(135deg)
 /*============= MARKET LEADERS SLIDER ============= */
 .ml-slider
 	margin-bottom: 50px
@@ -295,17 +340,21 @@
 			content: ""
 /*============= ABOUT ============= */
 .about
+	overflow: hidden
 	margin-bottom: 50px
+	padding: 0 30px
+	+sm(margin-bottom, 30px)
 	.title-alignCenter
 		display: flex
 		justify-content: center
 		margin-bottom: 30px
 	&__launch
-		padding: 0 30px
+		+md-m(padding-right, 30px)
 	&__inner
 		position: relative
 		display: grid
 		grid-template-columns: 1fr 1fr
+		+md(grid-template-columns, 1fr)
 	&__title
 		font-family: Geometria
 		font-style: normal
@@ -322,8 +371,13 @@
 		line-height: 157.2%
 		color: var(--menu-font-color)
 		margin-bottom: 90px
+		+sm(margin-bottom, 45px)
 	&__launch-bc
 		position: relative
+		+md(margin-bottom, 60px)
+		+sm(margin-bottom, 45px)
+		img
+			+md(margin, 0 auto)
 		.figure-bc
 			position: absolute
 			z-index: -1
@@ -332,13 +386,19 @@
 			top: 50%
 			transform: translateY(-50%)
 			+lg(max-width, 800px)
+			+md-block()
+				top: 0
+				left: 50%
+				transform: translateX(-50%)
 	&__points
-		padding: 0 30px
 		position: relative
+		+md(margin, 0 auto)
+		+md-m(padding-left, 30px)
 		.circle-bc
 			top: -80px
 			right: -80px
 			position: absolute
+			+md(display, none)
 		&__item
 			position: relative
 			padding: 25px 35px
