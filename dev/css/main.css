@@ -954,7 +954,6 @@ input[type='radio']:checked::before {
 }
 
 .brands__title {
-  position: relative;
   text-decoration: none;
   font-family: Roboto;
   font-style: normal;
@@ -962,13 +961,18 @@ input[type='radio']:checked::before {
   font-size: 18px;
   line-height: 21px;
   color: var(--font-color);
+  display: flex;
 }
 
-.brands__title:hover::after {
+.brands__title p {
+  position: relative;
+}
+
+.brands__title p:hover::after {
   opacity: 1;
 }
 
-.brands__title::after {
+.brands__title p::after {
   opacity: 0;
   content: '';
   display: block;
